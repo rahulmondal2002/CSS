@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>How to create fade-in effect on page load using CSS</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #000;
+        }
+
+        .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .buffering-icon {
+            width: 200px;
+            height: 200px;
+            border: 10px solid white;
+            border-radius: 50%;
+            border-top: 5px solid #fff;
+            animation: spin 0.5s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .waves-container {
+            display: flex;
+        }
+
+        .wave {
+            width: 6px;
+            height: 200px;
+            background: linear-gradient(45deg, violet, blue);
+            margin: 10px;
+            animation: wave 1s linear infinite;
+            border-radius: 20px;
+        }
+
+        .wave:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .wave:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .wave:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .wave:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .wave:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
+        .wave:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+
+        .wave:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+
+        .wave:nth-child(9) {
+            animation-delay: 0.8s;
+        }
+
+        .wave:nth-child(10) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: scale(0);
+            }
+		
+            25% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0);
+            }
+
+	    75% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(0);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .text {
+            font-size: 40px;
+            color: cyan;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="buffering-icon"></div>
+        <div class="waves-container">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+	    <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+	    
+        </div>
+        <div class="text">!! PAGE NOT READY YET !!</div>
+    </div>
+
+</body>
+
+</html>

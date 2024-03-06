@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rm's Kart - Contact Us</title>
+    <link rel="stylesheet" href="rmsheet.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: gray;
+            background: linear-gradient(0deg, rgba(253, 187, 45, 1) 0%, rgba(34, 193, 195, 1) 100%);
+            color: brown;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #E5804E;
+            background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #logo {
+            width: 300px;
+            height: 150px;
+            border-radius: 60%;
+            transition: transform 0.2s ease-in-out; /* Add transition for smooth effect */
+        }
+
+        #logo:hover {
+            transform: scale(1.2); /* Adjust the scale factor for the desired zoom effect */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section {
+            background-image: url('cimg.jpg');  /* Set the background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .contact-info {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 3px solid black;
+            border-radius: 4px;
+        }
+
+        .send-message-box {
+            background-color: #3498db;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        a.button-link {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            text-align: center;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 15px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #E99E90;
+            background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 0.5px;
+            width: 100%;
+            height: 45px;
+        }
+
+        a.blink {
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            animation: blink 0.5s infinite alternate;
+        }
+
+        @keyframes blink {
+            from {
+                color: #3498db;
+            }
+
+            to {
+                color: #e74c3c;
+                /* Change to the desired highlight color */
+            }
+        }
+
+        .login-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 15px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        #chat-icon {
+            position: fixed;
+            bottom: 60px;
+            right: 40px;
+            background-color: red;
+            color: #fff;
+            padding: 10px;
+            border-radius: 30%;
+            cursor: pointer;
+            z-index: 999;
+
+            /* Add animation properties */
+            animation: blink 0.5s infinite alternate;
+        }
+
+        @keyframes blink {
+            from {
+                background-color: green;
+            }
+
+            to {
+                background-color: red;
+                /* Change to the desired highlight color */
+            }
+        }
+
+        /* Chat Box Styles (initially hidden) */
+        #chat-box {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        #chat-header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #chat-messages {
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        #user-input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-top: none;
+            outline: none;
+        }
+
+        #send-button {
+            width: 100%;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="flogo.png" alt="Logo">
+        <h1>RM's KART</h1>
+    </header>
+
+    <section>
+        <u>
+            <h2>Contact Us</h2>
+        </u>
+        <div class="contact-info">
+            <p><strong>Toll-Free Number:</strong> <a href="tel:18001234567">1-800-123-4567</a></p>
+            <p><strong>Mobile Number:</strong> <a href="tel:+1234567890">+123 456 7890</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@rmkart.com">info@rmkart.com</a></p>
+        </div>
+<br>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <div class="send-message-box">
+                <a href="fdbk.html" class="button-link">Send Message</a>
+            </div>
+        </form>
+
+        <!-- Chat Icon -->
+        <div id="chat-icon">Chat</div>
+
+        <!-- Chat Box -->
+        <div id="chat-box">
+            <div id="chat-header">Chat with Assistant</div>
+            <div id="chat-messages">
+                <div><strong>AI/Agent:</strong> Welcome! How can we assist you today?</div>
+            </div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+
+        <a href="rm@.html" class="blink">Back to Main Page</a>
+    </section>
+    <br>
+    <br>
+    <footer>
+        <footer id="copyright" onmouseover="showPopup()" onmouseout="hidePopup()">
+        <p><b><a href="cr.html" style="color: #fff; text-decoration: underline;">&copy; 2024 Rm's Kart. All rights reserved.</a></b></p>
+    </footer>
+</body>
+
+</html>
