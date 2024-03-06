@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rm's Kart - Pressure Cookers</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+	    background: linear-gradient(0deg, rgba(34,45,195,1) 0%, rgba(253,45,91,1) 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #79a7cf;
+	    background: linear-gradient(0deg, rgba(253,45,91,1) 0%, rgba(34,45,195,1) 100%);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+	#logo {
+            width: 300px;
+            height: 150px;
+            border-radius: 60%;
+            transition: transform 0.2s ease-in-out; /* Add transition for smooth effect */
+        }
+
+        #logo:hover {
+            transform: scale(1.2); /* Adjust the scale factor for the desired zoom effect */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column; /* Stack boxes vertically */
+            align-items: center; /* Center align the boxes */
+            background-color: #F5DEB3;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 50%; /* Set the width of each box within a range */
+            max-width: 1200px; /* Maximum width */
+            margin: auto; /* Center the section */
+        }
+
+        .cooker-box {
+            width: 95%; /* Set the width of each box */
+            margin: 20px 0; /* Add margin between the boxes */
+            padding: 10px;
+            box-sizing: border-box;
+            border: 4px solid #3498db;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cooker-image {
+            width: 20%;
+            height: 160px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .cooker-details {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .add-to-cart {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .add-to-cart:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            background-color: #8f402d;
+	    background: linear-gradient(0deg, rgba(253,45,91,1) 0%, rgba(34,45,195,1) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 0.5px;
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .back-to-products {
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+	.copyright-link {
+            cursor: pointer;
+            text-decoration: underline;
+            color: white; /* Change to the desired color, e.g., red */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="flogo.png" alt="Company Logo" width="150">
+        <h1>Rm's KART - Pressure Cookers</h1>
+    </header>
+    <section>
+        <div class="cooker-box">
+            <img class="cooker-image" src="pl1.jpg" alt="Instant Pot Duo">
+            <div class="cooker-details">
+                <h3><b><u>Instant Pot Duo</u></b></h3>
+                <p>Price starts from:(₹ 5,499/-)</p>
+                <p><b><u>Specifications:</u></b>
+                    <br>
+                    <b>Capacity:</b> 6 Quarts.
+		    <br>
+                    <b>Functions:</b> Pressure Cooker, Slow Cooker, Rice Cooker, Steamer, Sauté, Yogurt Maker, Warmer.
+                    <br>
+                    <b>Material:</b> Stainless Steel.
+                    <b>Display:</b> LCD.
+                    <b>Pressure Settings:</b> High and Low.
+                    <br>
+                    <b>Safety Features:</b> 10+ built-in safety features.
+                    <b>Accessories:</b> Steam rack, condensation collector, recipe booklet.
+                    <br>
+                    <b>Weight:</b> 11.8 lbs.
+                </p>
+                <p><b>Estimated Delivery Date: 3-4 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 20% off on credit cards / 10-15% off on any UPI</i></p>
+            </div>
+        </div>
+
+        <div class="cooker-box">
+            <img class="cooker-image" src="pl2.jpg" alt="Prestige Deluxe Alpha">
+            <div class="cooker-details">
+                <h3><b><u>Prestige Deluxe Alpha</u></b></h3>
+                <p>Price starts from:(₹ 3,499/-)</p>
+                <p><b><u>Specifications:</u></b>
+                    <br>
+                    <b>Capacity:</b> 5.5 Litres.
+                    <b>Material:</b> Stainless Steel.
+                    <b>Lid Type:</b> Outer Lid.
+                    <br>
+                    <b>Handles:</b> Bakelite.
+                    <b>Pressure Indicator:</b> Yes.
+                    <b>Base:</b> Alpha Base (Induction compatible).
+                    <br>
+                    <b>Warranty:</b> 5 years on cooker body.
+                </p>
+                <p><b>Estimated Delivery Date: 3-4 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 15% off on credit cards / 8-12% off on any UPI</i></p>
+            </div>
+        </div>
+
+        <div class="cooker-box">
+            <img class="cooker-image" src="pl3.jpg" alt="Hawkins Contura">
+            <div class="cooker-details">
+                <h3><b><u>Hawkins Contura</u></b></h3>
+                <p>Price starts from:(₹ 2,199/-)</p>
+                <p><b><u>Specifications:</u></b>
+                    <br>
+                    <b>Capacity:</b> 3 Litres.
+                    <b>Material:</b> Hard Anodized Aluminum.
+                    <b>Lid Type:</b> Inner Lid.
+                    <br>
+                    <b>Handles:</b> Heat-resistant.
+                    <b>Pressure Indicator:</b> Yes.
+                    <b>Base:</b> Gas Stovetop Compatible.
+                    <br>
+                    <b>Warranty:</b> 5 years.
+                </p>
+                <p><b>Estimated Delivery Date: 3-4 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 10% off on credit cards / 5-8% off on any UPI</i></p>
+            </div>
+        </div>
+
+        <div class="cooker-box">
+            <img class="cooker-image" src="pl4.jpg" alt="Pigeon by Stovekraft Favourite">
+            <div class="cooker-details">
+                <h3><b><u>Pigeon by Stovekraft Favourite</u></b></h3>
+                <p>Price starts from:(₹ 1,099/-)</p>
+                <p><b><u>Specifications:</u></b>
+                    <br>
+                    <b>Capacity:</b> 3 Litres.
+                    <b>Material:</b> Aluminum.
+                    <b>Lid Type:</b> Outer Lid.
+                    <br>
+                    <b>Handles:</b> Bakelite.
+                    <b>Pressure Indicator:</b> Yes.
+                    <b>Base:</b> Gas Stovetop Compatible.
+                    <br>
+                    <b>Warranty:</b> 5 years.
+                </p>
+                <p><b>Estimated Delivery Date: 3-4 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 10% off on credit cards / 5-8% off on any UPI</i></p>
+            </div>
+        </div>
+	<!-- (Coming Soon) -->
+        <div class="cooker-box">
+            <img class="cooker-image" src="p11.jpg" alt="Coming Soon">
+            <div class="cooker-details">
+                <h3><b><u><a href="buffering.html" class="visit-list">Exciting New Product Coming Soon!</a></u></b></h3>
+                <p class="coming-soon">Stay tuned for the latest addition to our Cooker collection.</p>
+            </div>
+        </div>	
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <footer id="copyright" onmouseover="showPopup()" onmouseout="hidePopup()">
+        <p><b><a href="cr.html" style="color: black; text-decoration: underline;">&copy; 2024 Rm's Kart. All rights reserved.</a></b></p>
+    </footer>
+    <a href="products.html" class="back-to-products"><b>Back to Products Page</b></a>
+</body>
+
+</html>

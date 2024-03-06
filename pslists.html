@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rm's Kart - Packaged Snacks</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+	    background: linear-gradient(0deg, rgba(34,45,195,1) 0%, rgba(253,45,91,1) 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #79a7cf;
+	    background: linear-gradient(0deg, rgba(253,45,91,1) 0%, rgba(34,45,195,1) 100%);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+	#logo {
+            width: 300px;
+            height: 150px;
+            border-radius: 60%;
+            transition: transform 0.2s ease-in-out; /* Add transition for smooth effect */
+        }
+
+        #logo:hover {
+            transform: scale(1.2); /* Adjust the scale factor for the desired zoom effect */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column; /* Stack boxes vertically */
+            align-items: center; /* Center align the boxes */
+            background-color: #F5DEB3;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 50%; /* Set the width of each box within a range */
+            max-width: 1200px; /* Maximum width */
+            margin: auto; /* Center the section */
+        }
+
+        .snack-box {
+            width: 95%;
+            margin: 20px 0;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 4px solid #3498db;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .snack-image {
+            width: 20%;
+            height: 160px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .snack-details {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .add-to-cart {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .add-to-cart:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            background-color: #8f402d;
+	    background: linear-gradient(0deg, rgba(253,45,91,1) 0%, rgba(34,45,195,1) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 0.5px;
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .back-to-products {
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .snack-specs {
+            text-align: left;
+            margin-top: 10px;
+        }
+	.copyright-link {
+            cursor: pointer;
+            text-decoration: underline;
+            color: white; /* Change to the desired color, e.g., red */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="flogo.png" alt="Company Logo" width="150">
+        <h1>Rm's KART - Packaged Snacks</h1>
+    </header>
+    <section>
+        <!-- Snack 1 -->
+        <div class="snack-box">
+            <img class="snack-image" src="psl1.jpg" alt="Snack 1">
+            <div class="snack-details">
+                <h3><b><u>Classic Potato Chips</u></b></h3>
+                <p>Price per Pack: (₹ 50/-)</p>
+                <div class="snack-specs">
+                    <b>Flavor:</b> Salted
+                    <br>
+                    <b>Weight:</b> 150g
+                    <br>
+                    <b>Brand:</b> Crunchy Delights
+                </div>
+                <p><b>Estimated Delivery Date: 3-4 Days</b></p>
+                <form class="delivery-form">
+                    <input type="text" placeholder="Enter Pincode">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Snack 2 -->
+        <div class="snack-box">
+            <img class="snack-image" src="psl2.jpg" alt="Snack 2">
+            <div class="snack-details">
+                <h3><b><u>Spicy Tortilla Chips</u></b></h3>
+                <p>Price per Pack: (₹ 70/-)</p>
+                <div class="snack-specs">
+                    <b>Flavor:</b> Spicy Jalapeno
+                    <br>
+                    <b>Weight:</b> 200g
+                    <br>
+                    <b>Brand:</b> Fire Crunch
+                </div>
+                <p><b>Estimated Delivery Date: 3-4 Days</b></p>
+                <form class="delivery-form">
+                    <input type="text" placeholder="Enter Pincode">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Snack 3 -->
+        <div class="snack-box">
+            <img class="snack-image" src="psl3.jpg" alt="Snack 3">
+            <div class="snack-details">
+                <h3><b><u>Chocolate Coated Nuts</u></b></h3>
+                <p>Price per Pack: (₹ 120/-)</p>
+                <div class="snack-specs">
+                    <b>Variety:</b> Mixed Nuts
+                    <br>
+                    <b>Weight:</b> 250g
+                    <br>
+                    <b>Brand:</b> Sweet Delights
+                </div>
+                <p><b>Estimated Delivery Date: 3-4 Days</b></p>
+                <form class="delivery-form">
+                    <input type="text" placeholder="Enter Pincode">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Snack 4 -->
+        <div class="snack-box">
+            <img class="snack-image" src="psl4.jpg" alt="Snack 4">
+            <div class="snack-details">
+                <h3><b><u>Rice Crackers</u></b></h3>
+                <p>Price per Pack: (₹ 60/-)</p>
+                <div class="snack-specs">
+                    <b>Flavor:</b> Sesame and Sea Salt
+                    <br>
+                    <b>Weight:</b> 180g
+                    <br>
+                    <b>Brand:</b> Crunchy Bites
+                </div>
+                <p><b>Estimated Delivery Date: 3-4 Days</b></p>
+                <form class="delivery-form">
+                    <input type="text" placeholder="Enter Pincode">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+            </div>
+        </div>
+	<!-- (Coming Soon) -->
+        <div class="snack-box">
+            <img class="snack-image" src="p11.jpg" alt="Coming Soon">
+            <div class="snack-details">
+                <h3><b><u><a href="buffering.html" class="visit-list">Exciting New Product Coming Soon!</a></u></b></h3>
+                <p class="coming-soon">Stay tuned for the latest addition to our packaged snacks collection.</p>
+            </div>
+        </div>
+
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <footer id="copyright" onmouseover="showPopup()" onmouseout="hidePopup()">
+        <p><b><a href="cr.html" style="color: black; text-decoration: underline;">&copy; 2024 Rm's Kart. All rights reserved.</a></b></p>
+    </footer>
+    <a href="products.html" class="back-to-products"><b>Back to Products Page</b></a>
+</body>
+
+</html>

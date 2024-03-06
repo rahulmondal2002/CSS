@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@rm's kart.com</title>
+    <link rel="stylesheet" href="rmsheet.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #DBD1FF;
+            background-image: linear-gradient(#19547b, #ffd89b);
+            color: #333;
+            margin: 0;
+            padding: 0;
+	
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #B8A8F1;
+            background-image: linear-gradient(#ffd89b, #19547b);
+            color: #fff;
+            width: 1500px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            margin: 10px 0;
+            animation: blink-transform 2s infinite alternate;
+        }
+
+        @keyframes blink-transform {
+            0% {
+                color: yellow;
+                transform: scale(1);
+            }
+
+            25% {
+                color: orange;
+                transform: scale(1.2);
+            }
+
+            50% {
+                color: cyan;
+                transform: scale(1);
+            }
+
+            75% {
+                color: purple;
+                transform: scale(1.2);
+            }
+
+            100% {
+                color: yellow;
+                transform: scale(1);
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% {
+                color: yellow;
+            }
+
+            100% {
+                color: orange;
+            }
+        }
+
+        /* Styling for Consumer, Seller, and Products boxes */
+        .nav-box {
+            background-color: #3A3F72;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .consumer-dropdown,
+        .seller-dropdown,
+        .products-link {
+            display: inline-block;
+        }
+
+        .consumer-dropdown-content,
+        .seller-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: brown;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            text-align: center;
+        }
+
+        .consumer-dropdown:hover .consumer-dropdown-content,
+        .seller-dropdown:hover .seller-dropdown-content {
+            display: block;
+        }
+
+        .consumer-dropdown-content a,
+        .seller-dropdown-content a,
+        .products-link a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .consumer-dropdown-content a:hover,
+        .seller-dropdown-content a:hover,
+        .products-link a:hover {
+            background-color: #555;
+        }
+
+        table {
+            width: 50px;
+            border-collapse: collapse;
+            margin: 25px 10px;
+            border: 2px solid blue;
+        }
+
+        table,
+        th,
+        td {
+            border: 10px solid blue;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        td {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .gallery-image {
+            width: 330px;
+            height: auto;
+            cursor: pointer;
+            transition: width 0.5s, height 0.5s;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            opacity: 0;
+            transition: width 0.5s, height 0.5s, opacity 0.5s;
+        }
+
+        .overlay p {
+            margin: 0;
+        }
+
+        .gallery-image {
+    		width: 330px;
+   	 	height: auto;
+    		cursor: pointer;
+    		transition: transform 0.5s, width 0.5s ease-in-out, height 0.5s ease-in-out;
+	}
+
+	.gallery-image:hover {
+    		transform: scale(1.2);
+    		width: 360px; /* Adjust the width for the desired zoom effect */
+	}
+
+        #logo {
+            width: 300px;
+            height: 150px;
+            border-radius: 60%;
+            transition: transform 0.2s ease-in-out; /* Add transition for smooth effect */
+        }
+
+        #logo:hover {
+            transform: scale(1.2); /* Adjust the scale factor for the desired zoom effect */
+        }
+
+        footer {
+            padding: 10px;
+            height: 20px;
+            background-color: #333;
+            background-image: linear-gradient(#ffd89b, #19547b);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer; /* Add cursor style for better UX */
+            flex-direction: column; /* Align items in a column */
+        }
+
+        .footer-info {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+	 #contact-us,
+    #additional-info {
+        background: linear-gradient(#3498db, #2c3e50); /* Adjust the colors as needed */
+        color: #fff;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    #contact-us a,
+    #additional-info a {
+        color: #fff;
+        text-decoration: underline;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="flogo.png" alt="Logo">
+        <h1>RM's KART</h1>
+        <nav>
+            <ul>
+                <!-- Consumer Box -->
+                <li class="nav-box consumer-dropdown">
+                    <a href="#"><b>Consumer(Login/New Registration)</b></a>
+                    <div class="consumer-dropdown-content">
+                        <a href="login.html">..Login as a Consumer..</a>
+                        <a href="signup.html">..Register as a New Consumer..</a>
+                    </div>
+                </li>
+
+                <!-- Seller Box -->
+                <li class="nav-box seller-dropdown">
+                    <a href="#"><b>Seller(Login/New Registration)</b></a>
+                    <div class="seller-dropdown-content">
+                        <a href="login_seller.html">..Login as a Seller..</a>
+                        <a href="register_seller.html">..Register as a New Seller..</a>
+                    </div>
+                </li>
+
+                <!-- Products Box -->
+                <li class="nav-box">
+                    <a href="products.html"><b>Products</b></a>
+                </li>
+
+                <!-- Proud Delivery Partners Box -->
+                <li class="nav-box seller-dropdown">
+                    <a href="#"><b>Our Proud Delivery Partners</b></a>
+                    <div class="seller-dropdown-content">
+                        <b>
+                            <p style="background-color: #F1735C;">Blue Dart</p>
+                            <p style="background-color: #F1735C">E-Kart</p>
+                            <p style="background-color: #F1735C;">Professional Couriers</p>
+                            <p style="background-color: #F1735C;">Xpress-Bees</p>
+                            <p style="background-color: #F1735C;">DHL</p>
+                            <p style="background-color: #F1735C;">Shiprocket</p>
+                            <p style="background-color: #F1735C;">Delhivery</p>
+                            <p style="background-color: #F1735C;">E-com Express</p>
+                            <p style="background-color: #F1735C;">Shadowfax</p>
+                            <p style="background-color: #F1735C;">** MORE TO BE ADDED SOON **</p>
+                        </b>
+                    </div>
+                </li>
+
+                <!-- Contact Us Box -->
+                <li class="nav-box">
+                    <a href="contact.html"><b>Contact Us</b></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <table>
+        <tr>
+        </tr>
+        <tr>
+            <td>
+		<a href="f_aboutus.html">
+                <div class="gallery-image">
+                    <img class="gallery-image" src="s1.jpg" alt="Image 1">
+                    <div class="overlay">
+                        <br>
+                        <br>
+                        <br>
+                        </br>
+                        <p><b>About Us</b></p>
+                    </div>
+                </div>
+		</a>
+            </td>
+            <td>
+		<a href="products.html">
+                <div class="gallery-image">
+                    <img class="gallery-image" src="s2.jpg" alt="Image 2">
+                    <div class="overlay">
+                        <br>
+                        <br>
+                        <br>
+                        </br>
+                        <p><a href="products.html"><b>Our Products</b></a></p>
+                    </div>
+                </div>
+		</a>
+            </td>
+            <td>
+		<a href="f_specialoffers.html">
+                <div class="gallery-image">
+                    <img class="gallery-image" src="s3.jpg" alt="Image 3">
+                    <div class="overlay">
+                        <br>
+                        <br>
+                        <br>
+                        </br>
+                        <p><b>Special Offers</b></p>
+                    </div>
+                </div>
+		</a>
+            </td>
+            <td>
+		<a href="f_howtoorder.html">
+                <div class="gallery-image">
+                    <img class="gallery-image" src="s4.jpg" alt="Image 4">
+                    <div class="overlay">
+                        <br>
+                        <br>
+                        <br>
+                        </br>
+                        <p><b>How to Order</b></p>
+                    </div>
+                </div>
+		</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+		<a href="f_paymentoptions.html">
+                <div class="gallery-image">
+                    <img class="gallery-image" src="s5.jpg" alt="Image 5">
+                    <div class="overlay">
+                        <br>
+                        <br>
+                        <br>
+                        </br>
+                        <p><b>Payment Options</b></p>
+                    </div>
+                </div>
+		</a>
+            </td>
+            <td>
+		<a href="f_shippinganddelivery.html">
+                <div class="gallery-image">
+                    <img class="gallery-image" src="s6.jpg" alt="Image 6">
+                    <div class="overlay">
+                        <br>
+                        <br>
+                        <br>
+                        </br>
+                        <p><b>Shipping and Delivery</b></p>
+                    </div>
+                </div>
+		</a>
+            </td>
+            <td>
+		<a href="rp.html">
+                <div class="gallery-image">
+                    <img class="gallery-image" src="s7.jpg" alt="Image 7">
+                    <div class="overlay">
+                        <br>
+                        <br>
+                        <br>
+                        </br>
+                        <p><b>Return Policy</b></p>
+                    </div>
+                </div>
+		</a>
+            </td>
+            <td>
+		<a href="contact.html">
+                <div class="gallery-image">
+                    <img class="gallery-image" src="s8.jpg" alt="Image 8">
+                    <div class="overlay">
+                        <br>
+                        <br>
+                        <br>
+                        </br>
+                        <p><a href="contact.html"><b>Contact Us</b></a></p>
+                    </div>
+                </div>
+		</a>
+            </td>
+        </tr>
+    </table>
+    <br>
+   <section id="contact-us">
+        <h2><u>Contact Us</u></h2>
+        <p><b>Email:</b> <a href="mailto:info@example.com">info@rmkart.com</a></p>
+        <p><b>Phone:</b> <a href="tel:+1234567890">+123 456 7890</a> / <a href="tel:+18001234567">1-800-123-4567</a></p>
+        <p><b>Address:</b> <a href="https://www.google.com/maps/place/DREAM+APARTMENT+,+BEHALA+,+KAZIPARA+ROAD+,+APARTMENT+BUILDING+./@22.5040266,88.3086642,20.65z/data=!4m15!1m8!3m7!1s0x3a027a174f82480b:0xd6374f59315c837c!2s39,+Kazi+Para+Rd,+New+Bakshi+Bagan,+Parnasree+Palli,+Behala,+Kolkata,+West+Bengal+700060!3b1!8m2!3d22.5028305!4d88.3087672!16s%2Fg%2F11ldcz0g5b!3m5!1s0x3a027b61da501f7b:0x8f78b1b8eb7a6db2!8m2!3d22.5040927!4d88.3088103!16s%2Fg%2F11sh22r59f?entry=ttu" target="_blank">39 Kazipara Road, Parnasree, Kolkata-700060, India</a></p>
+    </section>
+
+    <!-- Additional Information Section -->
+    <section id="additional-info">
+        <h2><u>Additional Information</u></h2>
+        <ul>
+            <p><li><a href="tos.html">Terms of Service</a></li></p>
+            <p><li><a href="pp.html">Privacy Policy</a></li></p>
+            <p><li><a href="faqs.html">FAQs</a></li></p>
+        </ul>
+    </section>
+    <br>
+    <br>
+    <footer id="copyright" onmouseover="showPopup()" onmouseout="hidePopup()">
+        <p><b><a href="cr.html" style="color: #fff; text-decoration: underline;">&copy; 2024 Rm's Kart. All rights reserved.</a></b></p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rm's Kart - Handsets</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+	    background: linear-gradient(0deg, rgba(34,45,195,1) 0%, rgba(253,45,91,1) 100%);
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #79a7cf;
+	    background: linear-gradient(0deg, rgba(253,45,91,1) 0%, rgba(34,45,195,1) 100%);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+	#logo {
+            width: 300px;
+            height: 150px;
+            border-radius: 60%;
+            transition: transform 0.2s ease-in-out; /* Add transition for smooth effect */
+        }
+
+        #logo:hover {
+            transform: scale(1.2); /* Adjust the scale factor for the desired zoom effect */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column; /* Stack boxes vertically */
+            align-items: center; /* Center align the boxes */
+            background-color: #F5DEB3;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 50%; /* Set the width of each box within a range */
+            max-width: 1200px; /* Maximum width */
+            margin: auto; /* Center the section */
+        }
+
+        .handset-box {
+            width: 95%; /* Set the width of each box */
+            margin: 20px 0; /* Add margin between the boxes */
+            padding: 10px;
+            box-sizing: border-box;
+            border: 4px solid #3498db;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .handset-image {
+            width: 20%;
+            height: 160px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .handset-details {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .add-to-cart {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .add-to-cart:hover {
+            background-color: #2874a6;
+        }
+
+        .delivery-form {
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .submit-btn:hover {
+            background-color: #2874a6;
+        }
+
+        footer {
+            background-color: #8f402d;
+	    background: linear-gradient(0deg, rgba(253,45,91,1) 0%, rgba(34,45,195,1) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 0.5px;
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .back-to-products {
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+	.copyright-link {
+            cursor: pointer;
+            text-decoration: underline;
+            color: white; /* Change to the desired color, e.g., red */
+        }
+	
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="flogo.png" alt="Company Logo" width="150">
+        <h1>Rm's KART - Handsets</h1>
+    </header>
+    <section>
+        <div class="handset-box">
+            <img class="handset-image" src="ml1.jpg" alt="SAMSUNG S24 ULTRA">
+            <div class="handset-details">
+                <h3><b><u>SAMSUNG S24 ULTRA</u></b></h3>
+                <p>Price starts from:(₹ 1,29,999/-)</p>
+                <p><b><u>Specifications:</u></b>
+			<br>
+			<b>Chipset:</b> Snapdragon 8 Gen 3 .
+			<br>
+			<b>RAM (GB):</b> 12 .
+			<b>Storage (GB):</b> 128, 256, 512, 1TB .
+			<br>
+			<b>Display:</b> 6.8 inch, 1440 x 3088 pixels .
+			<br>
+			<b>Front Camera:</b> 12MP , Primary Camera: 200MP + 12MP + 50MP + 10MP .
+			<br>
+			<b>Battery:</b> 5000mAh(Typ) .
+			<b>Operating System:</b> Android 14 .
+			<br>
+			<b>Status:</b> Launched on 18th January, 2024 .
+			<br>
+			<b>Colour Options:</b> Titanium Black, Titanium Gray, Titanium Violet, Titanium Yellow; Samsung Website Exclusive: Jade Green, Sapphire Blue, Sandstone Orange .</p>
+                <p><b>Estimated Delivery Date: 7 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 10% off on credit cards / 15-20% off on any UPI</i></p>
+            </div>
+        </div>
+
+	<div class="handset-box">
+            <img class="handset-image" src="ml2.jpg" alt="iPHONE 15 PRO MAX">
+            <div class="handset-details">
+                <h3>iPHONE 15 PRO MAX</h3>
+                <p>Price starts from:(₹ 1,59,900/-)</p>
+                <p><b><u>Specifications:</u></b>
+			<br>
+			<b>Chipset:</b> Apple A17 Pro .
+			<br>
+			<b>RAM (GB):</b> N/A .
+			<b>Storage (GB):</b> 128, 256, 512, 1TB .
+			<br>
+			<b>Display:</b> 6.70-inch, 2796 x 1290 pixels .
+			<br>
+			<b>Front Camera:</b> 12MP , Primary Camera: 48MP + 12MP + 12MP .
+			<br>
+			<b>Battery:</b> 29 hours video playback, 95 hours audio playback .
+			<b>Operating System:</b> iOS 17 .
+			<br>
+			<b>Status:</b> Launched on 12th September, 2023 .
+			<br>
+			<b>Colour Options:</b> Black Titanium, White Titanium, Blue Titanium, Natural Titanium .</p>
+                <p><b>Estimated Delivery Date: 7 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 10% off on credit cards / 15-20% off on any UPI</i></p>
+            </div>
+        </div>
+
+	<div class="handset-box">
+            <img class="handset-image" src="ml3.jpg" alt="XIAOMI REDMI NOTE 12 PRO">
+            <div class="handset-details">
+                <h3>XIAOMI REDMI NOTE 12 PRO</h3>
+                <p>Price starts from:(₹ 24,999/-)</p>
+                <p><b><u>Specifications:</u></b>
+			<br>
+			<b>Chipset:</b> MediaTek Dimensity 1080 .
+			<br>
+			<b>RAM (GB):</b> 6, 8 .
+			<b>Storage (GB):</b> 128, 256 .
+			<br>
+			<b>Display:</b> 6.67-inch, 2400 x 1080 pixels .
+			<br>
+			<b>Front Camera:</b> 16MP , Primary Camera: 50MP + 8MP + 2MP .
+			<br>
+			<b>Battery:</b> 5000 mAh .
+			<b>Operating System:</b> Android 12 .
+			<br>
+			<b>Status:</b> Launched on 5th January, 2023 .
+			<br>
+			<b>Colour Options:</b> Blue, Black, Purple .</p>
+                <p><b>Estimated Delivery Date: 7 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 10% off on credit cards / 15-20% off on any UPI</i></p>
+            </div>
+        </div>
+
+	<div class="handset-box">
+            <img class="handset-image" src="ml4.jpg" alt="OnePlus 12">
+            <div class="handset-details">
+                <h3>OnePlus 12</h3>
+                <p>Price starts from:(₹ 64,999/-)</p>
+                <p><b><u>Specifications:</u></b>
+			<br>
+			<b>Chipset:</b> Snapdragon 8 Gen 3 .
+			<br>
+			<b>RAM (GB):</b> 12, 16 .
+			<b>Storage (GB):</b> 256, 512 .
+			<br>
+			<b>Display:</b> 6.82-inch, 1440 x 3168 pixels .
+			<br>
+			<b>Front Camera:</b> 32MP , Primary Camera: 50MP + 48MP + 64MP .
+			<br>
+			<b>Battery:</b> 5400 mAh .
+			<b>Operating System:</b> Android 14 .
+			<br>
+			<b>Status:</b> Launched on 23rd January, 2024 .
+			<br>
+			<b>Colour Options:</b> Green, Black, White .</p>
+                <p><b>Estimated Delivery Date: 7 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 10% off on credit cards / 15-20% off on any UPI</i></p>
+            </div>
+        </div>
+
+	<div class="handset-box">
+            <img class="handset-image" src="ml5.jpg" alt="Asus ROG Phone 8 Pro">
+            <div class="handset-details">
+                <h3>Asus ROG Phone 8 Pro</h3>
+                <p>Price starts from:(₹ 94,999/-)</p>
+                <p><b><u>Specifications:</u></b>
+			<br>
+			<b>Chipset:</b> Snapdragon 8 Gen 3 .
+			<br>
+			<b>RAM (GB):</b> 16, 24 .
+			<b>Storage (GB):</b> 512, 1TB .
+			<br>
+			<b>Display:</b> 6.78-inch, 1080 x 2448 pixels .
+			<br>
+			<b>Front Camera:</b> 32MP , Primary Camera: 50MP + 13MP + 32MP .
+			<br>
+			<b>Battery:</b> 5500 mAh .
+			<b>Operating System:</b> Android 14 .
+			<br>
+			<b>Status:</b> Launched on 9th January, 2024 .
+			<br>
+			<b>Colour Options:</b> Phantom Black, Rebel Gray .</p>
+                <p><b>Estimated Delivery Date: 7 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 10% off on credit cards / 15-20% off on any UPI</i></p>
+            </div>
+        </div>
+	<!-- (Coming Soon) -->
+        <div class="handset-box">
+            <img class="handset-image" src="p11.jpg" alt="Coming Soon">
+            <div class="handset-details">
+                <h3><b><u><a href="buffering.html" class="visit-list">Exciting New Product Coming Soon!</a></u></b></h3>
+                <p class="coming-soon">Stay tuned for the latest addition to our Mobile Handset collection.</p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <footer id="copyright" onmouseover="showPopup()" onmouseout="hidePopup()">
+        <p><b><a href="cr.html" style="color: black; text-decoration: underline;">&copy; 2024 Rm's Kart. All rights reserved.</a></b></p>
+    </footer>
+    <a href="products.html" class="back-to-products"><b>Back to Products Page</b></a>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rm's Kart - Daily Moisturizers</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+	    background: linear-gradient(0deg, rgba(34,45,195,1) 0%, rgba(253,45,91,1) 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #79a7cf;
+	    background: linear-gradient(0deg, rgba(253,45,91,1) 0%, rgba(34,45,195,1) 100%);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+	#logo {
+            width: 300px;
+            height: 150px;
+            border-radius: 60%;
+            transition: transform 0.2s ease-in-out; /* Add transition for smooth effect */
+        }
+
+        #logo:hover {
+            transform: scale(1.2); /* Adjust the scale factor for the desired zoom effect */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column; /* Stack boxes vertically */
+            align-items: center; /* Center align the boxes */
+            background-color: #F5DEB3;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 50%; /* Set the width of each box within a range */
+            max-width: 1200px; /* Maximum width */
+            margin: auto; /* Center the section */
+        }
+
+        .moisturizer-box {
+            width: 95%;
+            margin: 20px 0;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 4px solid #3498db;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .moisturizer-image {
+            width: 20%;
+            height: 160px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .moisturizer-details {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .add-to-cart {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .add-to-cart:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            background-color: #8f402d;
+	    background: linear-gradient(0deg, rgba(253,45,91,1) 0%, rgba(34,45,195,1) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 0.5px;
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .back-to-products {
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .moisturizer-specs {
+            text-align: left;
+            margin-top: 10px;
+        }
+	.copyright-link {
+            cursor: pointer;
+            text-decoration: underline;
+            color: white; /* Change to the desired color, e.g., red */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="flogo.png" alt="Company Logo" width="150">
+        <h1>Rm's KART - Daily Moisturizers</h1>
+    </header>
+    <section>
+        <!-- Moisturizer 1 -->
+        <div class="moisturizer-box">
+            <img class="moisturizer-image" src="mdl1.jpg" alt="Moisturizer 1">
+            <div class="moisturizer-details">
+                <h3><b><u>Neutrogena Hydro Boost Water Gel</u></b></h3>
+                <p>Price starts from:(₹ 699/-)</p>
+                <div class="moisturizer-specs">
+                    <b>Brand:</b> Neutrogena
+                    <br>
+                    <b>Type:</b> Water Gel
+                    <br>
+                    <b>Size:</b> 50ml
+                    <br>
+                    <b>Skin Type:</b> All Skin Types
+                </div>
+                <p><b>Estimated Delivery Date: 3-4 Days</b></p>
+                <form class="delivery-form">
+                    <input type="text" placeholder="Enter Pincode">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: Free sample with every purchase / 15% off on next order</i></p>
+            </div>
+        </div>
+
+        <!-- Moisturizer 2 -->
+        <div class="moisturizer-box">
+            <img class="moisturizer-image" src="mdl2.jpg" alt="Moisturizer 2">
+            <div class="moisturizer-details">
+                <h3><b><u>CeraVe Daily Moisturizing Lotion</u></b></h3>
+                <p>Price starts from:(₹ 899/-)</p>
+                <div class="moisturizer-specs">
+                    <b>Brand:</b> CeraVe
+                    <br>
+                    <b>Type:</b> Lotion
+                    <br>
+                    <b>Size:</b> 236ml
+                    <br>
+                    <b>Skin Type:</b> Dry Skin
+                </div>
+                <p><b>Estimated Delivery Date: 3-4 Days</b></p>
+                <form class="delivery-form">
+                    <input type="text" placeholder="Enter Pincode">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: Buy 2, get 1 free / Free shipping on orders above ₹1500</i></p>
+            </div>
+        </div>
+
+        <!-- Moisturizer 3 -->
+        <div class="moisturizer-box">
+            <img class="moisturizer-image" src="mdl3.jpg" alt="Moisturizer 3">
+            <div class="moisturizer-details">
+                <h3><b><u>Olay Regenerist Micro-Sculpting Cream</u></b></h3>
+                <p>Price starts from:(₹ 1299/-)</p>
+                <div class="moisturizer-specs">
+                    <b>Brand:</b> Olay
+                    <br>
+                    <b>Type:</b> Cream
+                    <br>
+                    <b>Size:</b> 50g
+                    <br>
+                    <b>Skin Type:</b> Mature Skin
+                </div>
+                <p><b>Estimated Delivery Date: 3-4 Days</b></p>
+                <form class="delivery-form">
+                    <input type="text" placeholder="Enter Pincode">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 10% off on credit cards / Free gift on orders above ₹2000</i></p>
+            </div>
+        </div>
+	<!-- (Coming Soon) -->
+        <div class="moisturizer-box">
+            <img class="moisturizer-image" src="p11.jpg" alt="Coming Soon">
+            <div class="moisturizer-details">
+                <h3><b><u><a href="buffering.html" class="visit-list">Exciting New Product Coming Soon!</a></u></b></h3>
+                <p class="coming-soon">Stay tuned for the latest addition to our daily moisturizer collection.</p>
+            </div>
+        </div>
+
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <footer id="copyright" onmouseover="showPopup()" onmouseout="hidePopup()">
+        <p><b><a href="cr.html" style="color: black; text-decoration: underline;">&copy; 2024 Rm's Kart. All rights reserved.</a></b></p>
+    </footer>
+    <a href="products.html" class="back-to-products"><b>Back to Products Page</b></a>
+</body>
+</html>

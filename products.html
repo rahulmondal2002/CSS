@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rm's Kart - Products</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+	    background: linear-gradient(to bottom, #99ff66 0%, #00ffff 100%);
+            background-color: cyan;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #bacec5;
+	    background: linear-gradient(to bottom, #99ff66 0%, #00ffff 100%);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }	
+	#logo {
+            width: 300px;
+            height: 150px;
+            border-radius: 60%;
+            transition: transform 0.2s ease-in-out; /* Add transition for smooth effect */
+        }
+
+        #logo:hover {
+            transform: scale(1.2); /* Adjust the scale factor for the desired zoom effect */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section {
+	    background-image: url('pimg.jpg');
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .product-box {
+            width: 200px;
+            margin: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-details {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            box-sizing: border-box;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-box:hover .product-image {
+            transform: scale(1.1);
+        }
+
+        .product-box:hover .product-details {
+            transform: translateY(0);
+        }
+
+        .add-to-cart {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+            display: block;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 15px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+            animation: blink 2s infinite; /* Adding blinking animation */
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% {
+                color: yellow;
+            }
+            25%, 75% {
+                color: red; /* Change this color for highlighting effect */
+            }
+        }
+
+        footer {
+            background-color: #333;
+	    background: linear-gradient(to bottom, #99ff66 0%, #00ffff 100%);
+            color: #fff;
+            text-align: center;
+            padding: 0.5px;
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            bottom: 0;
+	}
+
+        .login-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 999;
+        }
+
+        .login-popup form {
+            text-align: center;
+        }
+
+        .login-popup label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .login-popup input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .login-popup button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-popup a {
+            color: #3498db;
+            text-decoration: none;
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="flogo.png" alt="Logo" width="150">
+<br>
+        <h1>RM's KART</h1>
+	<h3><u>Products</u></h3>
+    </header>
+    <section>
+        
+        <div class="product-box">
+            <img class="product-image" src="p1.jpg" alt="Mobile Handsets">
+            <div class="product-details">
+                <h3>Mobile Handsets</h3>
+                <a href="mlists.html" class="visit-list">Go to List</a>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img class="product-image" src="p2.jpg" alt="Watches">
+            <div class="product-details">
+                <h3>Watches</h3>
+                <a href="wlists.html" class="visit-list">Go to List</a>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img class="product-image" src="p3.jpg" alt="Laptops">
+            <div class="product-details">
+                <h3>Laptops</h3>
+                <a href="llist.html" class="visit-list">Go to List</a>
+            </div>
+        </div>
+        <div class="product-box">
+            <img class="product-image" src="p4.jpg" alt="Pressure Cookers">
+            <div class="product-details">
+                <h3>Pressure Cookers</h3>
+                <a href="pclists.html" class="visit-list">Go to List</a>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img class="product-image" src="p5.jpg" alt="T-Shirts">
+            <div class="product-details">
+                <h3>T-Shirts</h3>
+                <a href="tslists.html" class="visit-list">Go to List</a>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img class="product-image" src="p6.jpg" alt="Shoes">
+            <div class="product-details">
+                <h3>Shoes</h3>
+                <a href="slists.html" class="visit-list">Go to List</a>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img class="product-image" src="p7.jpg" alt="Perfumes & Deo's">
+            <div class="product-details">
+                <h3>Perfumes & Deo's</h3>
+                <a href="p&dlists.html" class="visit-list">Go to List</a>
+            </div>
+        </div>
+
+	<div class="product-box">
+            <img class="product-image" src="p8.jpg" alt="Daily Moisturizers">
+            <div class="product-details">
+                <h3>Daily Moisturizers</h3>
+                <a href="dmlists.html" class="visit-list">Go to List</a>
+            </div>
+        </div>
+
+	<div class="product-box">
+            <img class="product-image" src="p9.jpg" alt="Dry Fruits">
+            <div class="product-details">
+                <h3>Dry Fruits</h3>
+                <a href="dflists.html" class="visit-list">Go to List</a>
+            </div>
+        </div>
+
+	<div class="product-box">
+            <img class="product-image" src="p10.png" alt="Packaged Snacks">
+            <div class="product-details">
+                <h3>Packaged Snacks</h3>
+                <a href="pslists.html" class="visit-list">Go to List</a>
+            </div>
+        </div>
+
+	<div class="product-box">
+            <img class="product-image" src="p11.jpg" alt="!! MORE COMING SOON !!">
+            <div class="product-details">
+                
+                <a href="buffering.html" class="visit-list">!! MORE COMING SOON !!</a>
+            </div>
+        </div>
+    </section>
+<br>
+<br>
+<br>
+<br>
+    <footer>
+        <footer id="copyright" onmouseover="showPopup()" onmouseout="hidePopup()">
+        <p><b><a href="cr.html" style="color: black; text-decoration: underline;">&copy; 2024 Rm's Kart. All rights reserved.</a></b></p>
+    </footer>
+    <a href="rm@.html" style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);"><b>Back to Main Page</b></a>
+</body>
+
+</html>

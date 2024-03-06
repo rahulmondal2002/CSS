@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rm's Kart - Watch List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+	    background: linear-gradient(0deg, rgba(34,45,195,1) 0%, rgba(253,45,91,1) 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #79a7cf;
+	    background: linear-gradient(0deg, rgba(253,45,91,1) 0%, rgba(34,45,195,1) 100%);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+	#logo {
+            width: 300px;
+            height: 150px;
+            border-radius: 60%;
+            transition: transform 0.2s ease-in-out; /* Add transition for smooth effect */
+        }
+
+        #logo:hover {
+            transform: scale(1.2); /* Adjust the scale factor for the desired zoom effect */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column; /* Stack boxes vertically */
+            align-items: center; /* Center align the boxes */
+            background-color: #F5DEB3;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+	    width: 50%; /* Set the width of each box within a range */
+            max-width: 1200px; /* Maximum width */
+            margin: auto; /* Center the section */
+        }
+
+        .watch-box {
+            width: 95%; /* Set the width of each box */
+            margin: 20px 0; /* Add margin between the boxes */
+            padding: 10px;
+            box-sizing: border-box;
+            border: 4px solid #3498db;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .watch-image {
+            width: 20%;
+            height: 160px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .watch-details {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .add-to-cart {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .add-to-cart:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            background-color: #8f402d;
+	    background: linear-gradient(0deg, rgba(253,45,91,1) 0%, rgba(34,45,195,1) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 0.5px;
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .back-to-products {
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+	.copyright-link {
+            cursor: pointer;
+            text-decoration: underline;
+            color: white; /* Change to the desired color, e.g., red */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="flogo.png" alt="Company Logo" width="150">
+        <h1>Rm's KART - Watch List</h1>
+    </header>
+    <section>
+        <div class="watch-box">
+            <img class="watch-image" src="wl1.jpg" alt="Rado Captain Cook">
+            <div class="watch-details">
+                <h3><b><u>Rado Captain Cook</u></b></h3>
+                <p>Price starts from:(₹ 94,999/-)</p>
+                <p><b><u>Specifications:</u></b>
+			<br>
+			<b>General:</b> <b>Engravable:</b> Yes .
+			<b>Product name:</b> Captain Cook Automatic .
+			<b>SKU:</b> R32505203 .
+			<b>Gender:</b> Men .
+			<br>
+			<b>Movement:</b>
+			<b>Movement Type:</b> Automatic .
+			<b>Movement Power Reserve:</b> 80 hours .
+			<b>Movement Reference:</b> 03.763.835 .
+			<br>
+			<b>Case:</b>
+			<b>Case Materials:</b> High-Tech Ceramic, Stainless Steel .
+			<b>Case Thickness:</b> 12.1 mm .
+			<b>Case Water Resistance:</b> 20 bar (200 m) .
+			<b>Case Colour (web):</b> light .
+			<b>Case Dimension:</b> 42.0 mm .
+			<b>Case Crystal:</b> Sapphire crystal with anti-reflective coating on both sides .
+			<br>
+			<b>Dial:</b>
+			<b>Dial Colour:</b> Blue .
+			<b>Dial Skeleton / Open-Heart:</b> No .
+			<b>Dial Has Date:</b> Yes .
+			<b>Dial Has Jewels:</b> No .
+			<b>Mother Of Pearl:</b> No .
+			<br>
+			<b>Bracelet:</b>
+			<b>Bracelet Materials:</b> Stainless Steel .</p>
+                <p><b>Estimated Delivery Date: 5 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 30% off on credit cards / 20% off on any UPI</i></p>
+            </div>
+        </div>
+
+	<div class="watch-box">
+            <img class="watch-image" src="wl2.jpg" alt="Scuderia Ferrari Pista">
+            <div class="watch-details">
+                <h3><b><u>Scuderia Ferrari Pista</u></b></h3>
+                <p>Price:(₹ 10,950/-)</p>
+                <p><b><u>Specifications:</u></b>
+			<br>
+			<b>REFERENCE NUMBER:</b>  830726 .
+			<br>
+			<b>SERIES:</b> Pista .
+			<br>
+			<b>CASE MATERIAL:</b> Stainless Steel .
+			<b>STRAP MATERIAL:</b> Stainless Steel .
+			<b>GLASS:</b> Mineral .
+			<br>
+			<b>WATER RESISTANCE:</b> 100M .
+			<b>CASE DIAMETER:</b> 44MM .
+			<b>THICKNESS:</b> 12MM .
+			<b>POWER RESRVE:</b> N/A Quartz .
+			<b>MANUFACTURED IN:</b> CHINA .
+			<b>DISPLAY TYPE:</b> Chronograph .</p>
+                <p><b>Estimated Delivery Date: 5 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 30% off on credit cards / 20% off on any UPI</i></p>
+            </div>
+        </div>
+
+	<div class="watch-box">
+            <img class="watch-image" src="wl3.jpg" alt="Apple Watch ultra 2">
+            <div class="watch-details">
+                <h3><b><u>Apple Watch ultra 2</u></b></h3>
+                <p>Price starts from:(₹ 89,900/-)</p>
+                <p><b><u>Specifications:</u></b>
+			<br>
+			<b>Release Date:</b> September, 2023 .
+			<b>Display:</b> 1.92 inches | LTPO OLED, Touchscreen, Digital Crown .
+			<br>
+			<b>Body:</b> Titanium | Textile straps .
+			<b>Battery Life:</b> 36 Hrs .
+			<br>
+			<b>Storage:</b>1GB RAM, 64GB ROM, Microphone, Loudspeaker .
+			<br>
+			<b>Compatibility:</b> iPhone XS or later with iOS 17 or later .</p>
+                <p><b>Estimated Delivery Date: 5 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 30% off on credit cards / 20% off on any UPI</i></p>
+            </div>
+        </div>
+
+	<div class="watch-box">
+            <img class="watch-image" src="wl4.jpg" alt="SAMSUNG Galaxy Watch 6">
+            <div class="watch-details">
+                <h3><b><u>SAMSUNG Galaxy Watch 6</u></b></h3>
+                <p>Price starts from:(₹ 29,999/-)</p>
+                <p><b><u>Specifications:</u></b>
+			<br>
+			<b>Relese Date:</b> 26th July, 2023 .
+			<b>Dial Colour:</b> Graphite, Silver .
+			<b>Dial Shape:</b> Round .
+			<b>Strap Material:</b> Silicone .
+			<b>Water Resistant:</b> 5 ATM, IP68 .</p>
+                <p><b>Estimated Delivery Date: 5 Days</b>
+                    <form class="delivery-form">
+                        <input type="text" placeholder="Enter Pincode">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </p>
+                <a href="login.html" class="add-to-cart">Add to Cart</a>
+                <p><i>Offers: 30% off on credit cards / 20% off on any UPI</i></p>
+            </div>
+        </div>
+	<!-- (Coming Soon) -->
+        <div class="watch-box">
+            <img class="watch-image" src="p11.jpg" alt="Coming Soon">
+            <div class="watch-details">
+                <h3><b><u><a href="buffering.html" class="visit-list">Exciting New Product Coming Soon!</a></u></b></h3>
+                <p class="coming-soon">Stay tuned for the latest addition to our Watch collection.</p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <footer id="copyright" onmouseover="showPopup()" onmouseout="hidePopup()">
+        <p><b><a href="cr.html" style="color: black; text-decoration: underline;">&copy; 2024 Rm's Kart. All rights reserved.</a></b></p>
+    </footer>
+    <a href="products.html" class="back-to-products"><b>Back to Products Page</b></a>
+</body>
+
+</html>
